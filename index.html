@@ -1,1 +1,359 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prasanna AI Creations</title>
+<meta name="description" content="AI creative services, personalized videos, songs, websites, Android apps and AI automation.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080808;--gold:#d8ad55;--light:#f5d98e;--text:#f8f5ed;--muted:#b8b2a6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:92%;max-width:1180px;margin:auto}
+header{position:sticky;top:0;z-index:10;background:#080808ee;border-bottom:1px solid #ffffff20}
+nav{height:75px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:bold;letter-spacing:2px;font-size:13px}
+.brand img{width:50px;height:50px;object-fit:contain}
+.brand span{color:var(--gold)}
+.links{display:flex;gap:22px;font-size:13px;color:#ddd}
+.links a:hover{color:var(--gold)}
+.btn{display:inline-block;padding:12px 20px;background:var(--gold);color:#111;font-weight:bold;border-radius:3px}
+.btn.outline{background:transparent;color:var(--light);border:1px solid var(--gold)}
+.hero{min-height:620px;display:flex;align-items:center;background:radial-gradient(ellipse at 80% 40%,#60471f55,transparent 40%),linear-gradient(120deg,#080808,#19140c)}
+.hero-content{padding:80px 0;max-width:800px}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase}
+h1{font:600 clamp(42px,7vw,78px)/1.1 'Playfair Display',serif;margin:20px 0}
+h1 span{color:var(--light)}
+.hero p{max-width:650px;color:var(--muted);font-size:17px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+section{padding:85px 0}
+.dark{background:#101010}
+.heading{margin-bottom:35px;max-width:720px}
+h2{font:600 clamp(30px,4vw,46px)/1.2 'Playfair Display',serif;margin:12px 0}
+.heading p,.about p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.about-card{padding:30px;border:1px solid #d8ad5570;background:#15120d}
+.about-card h3{color:var(--light);font:600 27px 'Playfair Display'}
+.service-group{margin-top:40px}
+.service-group h3{color:var(--light);font:600 23px 'Playfair Display'}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.service{padding:22px;background:#171717;border:1px solid #ffffff20;transition:.2s}
+.service:hover{border-color:var(--gold);transform:translateY(-3px)}
+.service small{color:var(--gold)}
+.service h4{margin:9px 0}
+.service p{font-size:13px;color:var(--muted);margin:0}
+.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:25px}
+.filter{border:1px solid #ffffff30;background:transparent;color:white;padding:9px 15px;border-radius:25px;cursor:pointer}
+.filter.active,.filter:hover{background:var(--gold);color:#111}
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.work{background:#171717;border:1px solid #ffffff20;overflow:hidden}
+.media{aspect-ratio:4/3;background:#050505;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.media img,.media video{width:100%;height:100%;object-fit:cover}
+.media iframe{width:100%;height:100%;border:0}
+.media audio{width:90%}
+.work-info{padding:16px}
+.work-info small{color:var(--gold)}
+.work-info p{font-size:13px;color:var(--muted)}
+.work-info a{color:var(--light);font-size:12px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{padding:20px;border-top:1px solid var(--gold);background:#171717}
+.step b{font:28px 'Playfair Display';color:var(--gold)}
+.step p{font-size:13px;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-card{padding:28px;background:#151515;border:1px solid #ffffff20}
+.contact-row{padding:13px 0;border-bottom:1px solid #ffffff20;display:flex;justify-content:space-between;gap:10px;font-size:13px}
+.contact-row span{color:var(--muted)}
+.contact-row a{color:var(--light);overflow-wrap:anywhere}
+form{display:grid;gap:12px}
+input,textarea{padding:13px;background:#080808;border:1px solid #ffffff30;color:white;width:100%}
+textarea{min-height:110px}
+footer{padding:25px;text-align:center;color:var(--muted);border-top:1px solid #ffffff20;font-size:12px}
+.whatsapp{position:fixed;bottom:18px;right:18px;background:var(--gold);color:#111;padding:13px 18px;border-radius:30px;font-weight:bold;z-index:20}
+@media(max-width:800px){
+ .links{gap:10px;font-size:11px}
+ .services,.portfolio{grid-template-columns:repeat(2,1fr)}
+ .steps{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+ nav{height:auto;min-height:70px;flex-wrap:wrap;padding:10px 0}
+ .links{width:100%;justify-content:space-between;order:2;padding:8px 0}
+ .about-grid,.contact-grid{grid-template-columns:1fr}
+ .services,.portfolio{grid-template-columns:1fr 1fr}
+ section{padding:60px 0}
+}
+@media(max-width:420px){
+ .services,.portfolio{grid-template-columns:1fr}
+ h1{font-size:43px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav class="container">
+<a class="brand" href="#home">
+<img src="logo.jpeg" alt="Prasanna AI Creations Logo">
+<div>PRASANNA <span>AI CREATIONS</span></div>
+</a>
+<div class="links">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</div>
+<a class="btn" href="#contact">Let's Talk</a>
+</nav>
+</header>
+
+<main id="home">
+<section class="hero">
+<div class="container hero-content">
+<div class="eyebrow">Where Creativity Meets AI</div>
+<h1>Ideas Made <span>Imaginative.</span><br>Solutions Made Smart.</h1>
+<p>Creative digital experiences and practical technology solutions — from personalized AI videos and songs to websites, Android apps, chatbots and voice agents.</p>
+<div class="actions">
+<a class="btn" href="#portfolio">Explore My Work</a>
+<a class="btn outline" href="https://wa.me/918074808009">Discuss Your Idea</a>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about-grid">
+<div class="about">
+<div class="eyebrow">About the Brand</div>
+<h2>Creativity with a touch of technology.</h2>
+<p><b>Prasanna AI Creations</b> brings ideas to life through AI-powered content, thoughtful design and digital development.</p>
+<p>From personalized songs and celebration videos to business creatives, websites, Android applications and AI-powered assistants, the focus is on creating meaningful digital experiences for people and businesses.</p>
+</div>
+<div class="about-card">
+<h3>Imagine. Create. Automate.</h3>
+<p>Every idea has a story. Let's shape yours into a creative video, a memorable gift, a beautiful design or a useful digital solution.</p>
+</div>
+</div>
+</section>
+
+<section class="dark" id="services">
+<div class="container">
+<div class="heading">
+<div class="eyebrow">What I Can Create For You</div>
+<h2>Services & Expertise</h2>
+<p>Creative, design and technology services for individuals and businesses.</p>
+</div>
+
+<div class="service-group">
+<h3>01 / AI Creative Services</h3>
+<div class="services">
+<article class="service"><small>01</small><h4>AI Image Creation</h4><p>Custom AI visuals, portraits and creative image generation.</p></article>
+<article class="service"><small>02</small><h4>AI Video Creation</h4><p>Cinematic, promotional, storytelling videos and reels.</p></article>
+<article class="service"><small>03</small><h4>AI Logo & Brand Creatives</h4><p>Logo concepts, brand visuals and creative identity assets.</p></article>
+<article class="service"><small>04</small><h4>Personalized Songs</h4><p>Birthday, name-based, emotional and occasion-based songs.</p></article>
+<article class="service"><small>05</small><h4>Birthday & Surprise Videos</h4><p>Personalized birthday songs and videos.</p></article>
+<article class="service"><small>06</small><h4>Anniversary Videos</h4><p>Marriage-date videos, anniversary songs and love stories.</p></article>
+<article class="service"><small>07</small><h4>Wedding Invitations</h4><p>Wedding, engagement and event invitation videos.</p></article>
+<article class="service"><small>08</small><h4>Posters & Social Media Designs</h4><p>Promotional posters, festival creatives and social posts.</p></article>
+<article class="service"><small>09</small><h4>Memorial & Tribute Videos</h4><p>Thoughtful remembrance and tribute video creations.</p></article>
+<article class="service"><small>10</small><h4>Reels, Shorts & Ad Creatives</h4><p>Social content, product promotions and brand advertisements.</p></article>
+<article class="service"><small>11</small><h4>Presentations & Digital Content</h4><p>AI-assisted presentations and educational content.</p></article>
+<article class="service"><small>12</small><h4>Illustrations & Activity Books</h4><p>Creative illustrations and printable materials.</p></article>
+</div>
+</div>
+
+<div class="service-group">
+<h3>02 / AI Assistants & Automation</h3>
+<div class="services">
+<article class="service"><small>13</small><h4>AI Chatbots</h4><p>Website and business chatbots for FAQs and enquiries.</p></article>
+<article class="service"><small>14</small><h4>AI Voice Agents</h4><p>Voice assistants for customer conversations and enquiries.</p></article>
+<article class="service"><small>15</small><h4>AI Agents</h4><p>Task-oriented AI assistants using connected tools and workflows.</p></article>
+<article class="service"><small>16</small><h4>Workflow Automation</h4><p>Connected workflows to reduce repetitive business tasks.</p></article>
+<article class="service"><small>17</small><h4>Social Media Automation</h4><p>Automation for social media enquiries and content workflows.</p></article>
+</div>
+</div>
+
+<div class="service-group">
+<h3>03 / Web, Apps & Digital Technology</h3>
+<div class="services">
+<article class="service"><small>18</small><h4>Website Development</h4><p>Responsive portfolio and business websites.</p></article>
+<article class="service"><small>19</small><h4>Android App Development</h4><p>Native Android development using Java.</p></article>
+<article class="service"><small>20</small><h4>UI/UX Design</h4><p>User-friendly app and website interface design.</p></article>
+<article class="service"><small>21</small><h4>Android Bug Fixing</h4><p>Debugging, testing support and app improvements.</p></article>
+</div>
+</div>
+</div>
+</section>
+
+<section id="portfolio">
+<div class="container">
+<div class="heading">
+<div class="eyebrow">Selected Creations</div>
+<h2>Portfolio & Project Showcase</h2>
+<p>Explore videos, images, songs, designs and digital projects.</p>
+</div>
+<div class="filters" id="filters"></div>
+<div class="portfolio" id="portfolioGrid"></div>
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+<div class="heading">
+<div class="eyebrow">How It Works</div>
+<h2>Let's Bring Your Idea to Life.</h2>
+</div>
+<div class="steps">
+<div class="step"><b>01</b><h4>Understand</h4><p>Share your idea and requirements.</p></div>
+<div class="step"><b>02</b><h4>Plan</h4><p>Confirm the service and creative direction.</p></div>
+<div class="step"><b>03</b><h4>Create</h4><p>Develop the creative work or digital solution.</p></div>
+<div class="step"><b>04</b><h4>Deliver</h4><p>Review and receive your final project.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="heading">
+<div class="eyebrow">Get In Touch</div>
+<h2>Let's Talk About Your Idea.</h2>
+<p>For personalized creations, business enquiries or technology projects, contact me.</p>
+</div>
+<div class="contact-grid">
+<div class="contact-card">
+<h3>Contact Details</h3>
+<div class="contact-row"><span>WhatsApp</span><a href="https://wa.me/918074808009">+91 80748 08009</a></div>
+<div class="contact-row"><span>Email</span><a href="mailto:prasannaaicreations@gmail.com">prasannaaicreations@gmail.com</a></div>
+<div class="contact-row"><span>Instagram</span><a href="https://www.instagram.com/prasannaaicreations/">@prasannaaicreations</a></div>
+<div class="contact-row"><span>YouTube</span><a href="https://www.youtube.com/@PrasannaAICreations">Prasanna AI Creations</a></div>
+</div>
+<div class="contact-card">
+<h3>Project Enquiry</h3>
+<form id="enquiry">
+<input id="name" required placeholder="Your Name">
+<input id="email" type="email" required placeholder="Your Email">
+<input id="service" placeholder="Service Required">
+<textarea id="message" required placeholder="Tell me about your project"></textarea>
+<button class="btn" type="submit">Send Enquiry</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+© <span id="year"></span> Prasanna AI Creations. All Rights Reserved.
+</footer>
+<a class="whatsapp" href="https://wa.me/918074808009">WhatsApp ↗</a>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+
+/* ADD YOUR PROJECTS BELOW.
+   YouTube: type "youtube"
+   Instagram: type "instagram"
+   Image: type "image"
+   Video file: type "video"
+   Song/audio: type "audio"
+
+   Upload local files to GitHub, e.g. assets/poster.jpg
+   Then use that file path as the url.
+*/
+const portfolioItems = [
+ // Example YouTube:
+ // {title:"My AI Video",category:"AI Videos",type:"youtube",url:"https://www.youtube.com/watch?v=VIDEO_ID",description:"AI promotional video."},
+
+ // Example Instagram:
+ // {title:"My Instagram Reel",category:"AI Videos",type:"instagram",url:"https://www.instagram.com/reel/POST_ID/",description:"Creative AI reel."},
+
+ // Example Image:
+ // {title:"Poster Design",category:"Posters",type:"image",url:"assets/poster.jpg",description:"Festival poster."},
+
+ // Example Video:
+ // {title:"Wedding Invitation",category:"Invitation Videos",type:"video",url:"assets/invitation.mp4",description:"Digital wedding invitation."},
+
+ // Example Song:
+ // {title:"Personalized Song",category:"Songs",type:"audio",url:"assets/song.mp3",description:"Custom birthday song."}
+];
+
+const grid=document.getElementById("portfolioGrid");
+const filters=document.getElementById("filters");
+let active="All Work";
+
+function youtubeId(url){
+ try{
+  const u=new URL(url);
+  if(u.hostname.includes("youtu.be"))return u.pathname.slice(1);
+  if(u.searchParams.get("v"))return u.searchParams.get("v");
+  const m=u.pathname.match(/\/(?:embed|shorts)\/([^/?]+)/);
+  return m?m[1]:"";
+ }catch{return ""}
+}
+
+function media(item){
+ if(item.type==="youtube"){
+  const id=youtubeId(item.url);
+  return `<iframe src="https://www.youtube-nocookie.com/embed/${id}" title="${item.title}" loading="lazy" allowfullscreen></iframe>`;
+ }
+ if(item.type==="instagram"){
+  return `<iframe src="${item.url.replace(/\/$/,"")}/embed" loading="lazy" allowfullscreen></iframe>`;
+ }
+ if(item.type==="image")return `<img src="${item.url}" alt="${item.title}" loading="lazy">`;
+ if(item.type==="video")return `<video src="${item.url}" controls preload="metadata"></video>`;
+ if(item.type==="audio")return `<audio src="${item.url}" controls></audio>`;
+ return "";
+}
+
+function render(){
+ const cats=["All Work",...new Set(portfolioItems.map(x=>x.category))];
+ filters.innerHTML="";
+ cats.forEach(cat=>{
+  const b=document.createElement("button");
+  b.className="filter"+(active===cat?" active":"");
+  b.textContent=cat;
+  b.onclick=()=>{active=cat;render()};
+  filters.appendChild(b);
+ });
+ const items=portfolioItems.filter(x=>active==="All Work"||x.category===active);
+ grid.innerHTML="";
+ if(!items.length){
+  grid.innerHTML=`<div class="work" style="grid-column:1/-1;padding:35px;text-align:center;color:#d8ad55">
+  <h3>Your creations will appear here.</h3>
+  <p>Add your Instagram, YouTube, images, videos and songs in the portfolioItems list in this HTML file.</p>
+  </div>`;
+  return;
+ }
+ items.forEach(item=>{
+  const card=document.createElement("article");
+  card.className="work";
+  const box=document.createElement("div");
+  box.className="media";
+  box.innerHTML=media(item);
+  const info=document.createElement("div");
+  info.className="work-info";
+  info.innerHTML=`<small>${item.category}</small><h4>${item.title}</h4><p>${item.description||""}</p><a href="${item.url}" target="_blank" rel="noopener">Open Project ↗</a>`;
+  card.append(box,info);
+  grid.appendChild(card);
+ });
+}
+render();
+
+document.getElementById("enquiry").addEventListener("submit",function(e){
+ e.preventDefault();
+ const subject=encodeURIComponent("Project Enquiry - Prasanna AI Creations");
+ const body=encodeURIComponent(
+ `Name: ${document.getElementById("name").value}
+Email: ${document.getElementById("email").value}
+Service: ${document.getElementById("service").value}
+
+Project Details:
+${document.getElementById("message").value}`
+ );
+ location.href=`mailto:prasannaaicreations@gmail.com?subject=${subject}&body=${body}`;
+});
+</script>
+</body>
+</html>
+
