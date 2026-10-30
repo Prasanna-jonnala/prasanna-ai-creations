@@ -4,356 +4,967 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prasanna AI Creations</title>
-<meta name="description" content="AI creative services, personalized videos, songs, websites, Android apps and AI automation.">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Prasanna AI Creations - AI videos, personalized songs, invitations, posters, websites, Android apps and AI-powered digital solutions.">
+<title>Prasanna AI Creations | Your Ideas, Our Creativity</title>
+
 <style>
-:root{--bg:#080808;--gold:#d8ad55;--light:#f5d98e;--text:#f8f5ed;--muted:#b8b2a6}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6}
-a{text-decoration:none;color:inherit}
-.container{width:92%;max-width:1180px;margin:auto}
-header{position:sticky;top:0;z-index:10;background:#080808ee;border-bottom:1px solid #ffffff20}
-nav{height:75px;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:bold;letter-spacing:2px;font-size:13px}
-.brand img{width:50px;height:50px;object-fit:contain}
-.brand span{color:var(--gold)}
-.links{display:flex;gap:22px;font-size:13px;color:#ddd}
-.links a:hover{color:var(--gold)}
-.btn{display:inline-block;padding:12px 20px;background:var(--gold);color:#111;font-weight:bold;border-radius:3px}
-.btn.outline{background:transparent;color:var(--light);border:1px solid var(--gold)}
-.hero{min-height:620px;display:flex;align-items:center;background:radial-gradient(ellipse at 80% 40%,#60471f55,transparent 40%),linear-gradient(120deg,#080808,#19140c)}
-.hero-content{padding:80px 0;max-width:800px}
-.eyebrow{color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase}
-h1{font:600 clamp(42px,7vw,78px)/1.1 'Playfair Display',serif;margin:20px 0}
-h1 span{color:var(--light)}
-.hero p{max-width:650px;color:var(--muted);font-size:17px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-section{padding:85px 0}
-.dark{background:#101010}
-.heading{margin-bottom:35px;max-width:720px}
-h2{font:600 clamp(30px,4vw,46px)/1.2 'Playfair Display',serif;margin:12px 0}
-.heading p,.about p{color:var(--muted)}
-.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-.about-card{padding:30px;border:1px solid #d8ad5570;background:#15120d}
-.about-card h3{color:var(--light);font:600 27px 'Playfair Display'}
-.service-group{margin-top:40px}
-.service-group h3{color:var(--light);font:600 23px 'Playfair Display'}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.service{padding:22px;background:#171717;border:1px solid #ffffff20;transition:.2s}
-.service:hover{border-color:var(--gold);transform:translateY(-3px)}
-.service small{color:var(--gold)}
-.service h4{margin:9px 0}
-.service p{font-size:13px;color:var(--muted);margin:0}
-.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:25px}
-.filter{border:1px solid #ffffff30;background:transparent;color:white;padding:9px 15px;border-radius:25px;cursor:pointer}
-.filter.active,.filter:hover{background:var(--gold);color:#111}
-.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.work{background:#171717;border:1px solid #ffffff20;overflow:hidden}
-.media{aspect-ratio:4/3;background:#050505;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.media img,.media video{width:100%;height:100%;object-fit:cover}
-.media iframe{width:100%;height:100%;border:0}
-.media audio{width:90%}
-.work-info{padding:16px}
-.work-info small{color:var(--gold)}
-.work-info p{font-size:13px;color:var(--muted)}
-.work-info a{color:var(--light);font-size:12px}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.step{padding:20px;border-top:1px solid var(--gold);background:#171717}
-.step b{font:28px 'Playfair Display';color:var(--gold)}
-.step p{font-size:13px;color:var(--muted)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.contact-card{padding:28px;background:#151515;border:1px solid #ffffff20}
-.contact-row{padding:13px 0;border-bottom:1px solid #ffffff20;display:flex;justify-content:space-between;gap:10px;font-size:13px}
-.contact-row span{color:var(--muted)}
-.contact-row a{color:var(--light);overflow-wrap:anywhere}
-form{display:grid;gap:12px}
-input,textarea{padding:13px;background:#080808;border:1px solid #ffffff30;color:white;width:100%}
-textarea{min-height:110px}
-footer{padding:25px;text-align:center;color:var(--muted);border-top:1px solid #ffffff20;font-size:12px}
-.whatsapp{position:fixed;bottom:18px;right:18px;background:var(--gold);color:#111;padding:13px 18px;border-radius:30px;font-weight:bold;z-index:20}
-@media(max-width:800px){
- .links{gap:10px;font-size:11px}
- .services,.portfolio{grid-template-columns:repeat(2,1fr)}
- .steps{grid-template-columns:repeat(2,1fr)}
+:root {
+  --gold: #efbd50;
+  --gold-light: #ffdf91;
+  --black: #03080d;
+  --panel: #0a151d;
+  --teal: #087b78;
+  --white: #f8f6ef;
+  --muted: #bdc6ca;
 }
-@media(max-width:600px){
- nav{height:auto;min-height:70px;flex-wrap:wrap;padding:10px 0}
- .links{width:100%;justify-content:space-between;order:2;padding:8px 0}
- .about-grid,.contact-grid{grid-template-columns:1fr}
- .services,.portfolio{grid-template-columns:1fr 1fr}
- section{padding:60px 0}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
-@media(max-width:420px){
- .services,.portfolio{grid-template-columns:1fr}
- h1{font-size:43px}
+a { color: inherit; text-decoration: none; }
+.container { width: min(1200px, 92%); margin: auto; }
+.gold { color: var(--gold); }
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(3,8,13,.97);
+  border-bottom: 1px solid #b58a39;
+  backdrop-filter: blur(12px);
+}
+.nav {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand img {
+  width: 225px;
+  max-height: 65px;
+  object-fit: contain;
+  display: block;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  font-size: 14px;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-cta, .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(120deg,#ffe08a,#dfa329);
+  color: #111;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  padding: 12px 22px;
+  font-weight: bold;
+  transition: .25s;
+}
+.nav-cta:hover, .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 22px #d99c2255;
+}
+.menu-btn {
+  display: none;
+  background: none;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 22px;
+}
+
+/* HERO BANNER */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 510px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gold);
+  background:
+    radial-gradient(ellipse at 75% 48%, #075d5b77, transparent 38%),
+    radial-gradient(ellipse at 85% 15%, #9a641e66, transparent 35%),
+    linear-gradient(110deg,#03070a 8%,#0b1b21 58%,#03080d);
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .5;
+  background-image:
+    radial-gradient(circle at 15% 20%, #f6c65a 1px, transparent 3px),
+    radial-gradient(circle at 85% 75%, #e8b34b 1px, transparent 3px),
+    radial-gradient(circle at 55% 12%, #ffffff 1px, transparent 3px);
+  background-size: 110px 100px, 150px 120px, 180px 130px;
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 90px;
+  left: 0;
+  bottom: -55px;
+  border-top: 2px solid #dba83f;
+  border-radius: 50%;
+  box-shadow: 0 -10px 30px #e9b94744;
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 55px 0 65px;
+}
+.eyebrow {
+  color: var(--gold-light);
+  font-family: Georgia,serif;
+  font-style: italic;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.hero h1 {
+  font-family: Georgia,serif;
+  font-size: clamp(40px,5vw,65px);
+  line-height: 1.08;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+  text-shadow: 0 3px 18px #d99c2244;
+}
+.hero-sub {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.hero-copy {
+  max-width: 540px;
+  color: #d2dadd;
+  margin-bottom: 24px;
+}
+.hero-art {
+  min-height: 390px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CSS PEACOCK FEATHER FAN */
+.feather-fan {
+  width: 390px;
+  height: 370px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feather {
+  position: absolute;
+  width: 100px;
+  height: 245px;
+  bottom: 70px;
+  left: calc(50% - 50px);
+  transform-origin: 50% 100%;
+  border-radius: 90% 90% 35% 35%;
+  background:
+    radial-gradient(ellipse at 50% 22%,#062d45 0 7%,#14a6a0 10%,#e3bd52 17%,#075c59 25%,transparent 36%),
+    linear-gradient(90deg,#083d3c,#0d967e 35%,#e2b44e 50%,#08766b 70%,#063d3c);
+  border: 1px solid #d8ad4b99;
+  box-shadow: 0 0 15px #0e9c8b33;
+}
+.feather:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 83%;
+  left: 50%;
+  bottom: 0;
+  background: linear-gradient(transparent,#f6d77c99);
+}
+.feather.f1 { transform: rotate(-65deg) scale(.82); }
+.feather.f2 { transform: rotate(-45deg) scale(.94); }
+.feather.f3 { transform: rotate(-25deg) scale(1.04); }
+.feather.f4 { transform: rotate(0deg) scale(1.12); }
+.feather.f5 { transform: rotate(25deg) scale(1.04); }
+.feather.f6 { transform: rotate(45deg) scale(.94); }
+.feather.f7 { transform: rotate(65deg) scale(.82); }
+
+.logo-medallion {
+  position: relative;
+  z-index: 5;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: radial-gradient(circle,#15252b,#03090d 75%);
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 35px #e7b64b88, inset 0 0 25px #e7b64b33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.logo-medallion img {
+  width: 100%;
+  max-height: 115px;
+  object-fit: contain;
+}
+.feather-label {
+  position: absolute;
+  z-index: 6;
+  width: 70px;
+  height: 70px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: #06151b;
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.25;
+  box-shadow: 0 0 16px #d9a43d44;
+}
+.label-one { top: 5px; left: 90px; }
+.label-two { top: 20px; right: 65px; }
+.label-three { top: 115px; right: 0; }
+.label-four { bottom: 5px; right: 70px; }
+.label-five { bottom: 5px; left: 70px; }
+.label-six { top: 115px; left: 0; }
+
+/* SECTION STYLES */
+section { padding: 65px 0; }
+.section-kicker {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.section-title {
+  color: var(--gold-light);
+  font-family: Georgia,serif;
+  font-size: clamp(30px,4vw,43px);
+  margin: 5px 0 10px;
+}
+.section-intro { color: var(--muted); max-width: 700px; }
+
+/* SERVICE STRIP */
+.service-strip {
+  padding: 22px 0;
+  background: #07131a;
+  border-bottom: 1px solid #9f793c88;
+}
+.service-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  gap: 8px;
+}
+.strip-item {
+  text-align: center;
+  border-right: 1px solid #8b6b3544;
+  padding: 4px;
+}
+.strip-icon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 8px;
+  color: var(--gold-light);
+  font-size: 21px;
+}
+.strip-item p { font-size: 11px; line-height: 1.35; }
+
+/* SERVICES */
+.services { background: #08131a; }
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+.service-card {
+  text-align: center;
+  padding: 22px 12px;
+  background: linear-gradient(145deg,#14232a,#080e13);
+  border: 1px solid #a47b3155;
+  border-radius: 13px;
+  transition: .25s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+.service-icon { font-size: 30px; margin-bottom: 8px; }
+.service-card h3 { color: var(--gold-light); font-size: 15px; }
+.service-card p { color: var(--muted); font-size: 12px; margin-top: 5px; }
+
+/* PORTFOLIO */
+.portfolio { background: #03080d; }
+.portfolio-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0;
+}
+.filter-btn {
+  cursor: pointer;
+  background: #0c171e;
+  color: white;
+  border: 1px solid #92723d;
+  padding: 8px 16px;
+  border-radius: 25px;
+}
+.filter-btn.active,.filter-btn:hover {
+  background: var(--gold);
+  color: #111;
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+.video-card {
+  overflow: hidden;
+  background: #0b151c;
+  border: 1px solid #a47b3188;
+  border-radius: 12px;
+  transition: .25s;
+}
+.video-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-light);
+}
+.video-frame {
+  width: 100%;
+  aspect-ratio: 9/16;
+  background: #101a20;
+}
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.youtube-card .video-frame { aspect-ratio: 16/9; }
+.video-info { padding: 13px 15px 16px; }
+.video-info h3 { color: var(--gold-light); font-size: 16px; }
+.video-info p { color: var(--muted); font-size: 12px; margin: 4px 0 10px; }
+.watch-link { color: var(--gold); font-size: 13px; font-weight: bold; }
+.watch-link:hover { text-decoration: underline; }
+
+/* ABOUT */
+.about {
+  background:
+    radial-gradient(ellipse at left,#0c666044,transparent 45%),
+    #09141b;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+.about-panel {
+  padding: 28px;
+  background: #0b171e;
+  border: 1px solid #b58b3c77;
+  border-radius: 15px;
+}
+.about-panel h3 { color: var(--gold-light); margin-bottom: 12px; }
+.about-panel p { color: var(--muted); }
+.benefits { list-style: none; margin-top: 15px; }
+.benefits li { margin: 10px 0; }
+.benefits li:before {
+  content: "✦";
+  color: var(--gold);
+  margin-right: 10px;
+}
+
+/* PROCESS */
+.process { background: #050c11; }
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+  margin-top: 28px;
+}
+.process-card {
+  background: #0b171e;
+  border: 1px solid #96753e77;
+  border-radius: 12px;
+  padding: 20px;
+}
+.process-card strong {
+  display: block;
+  color: var(--gold);
+  margin-bottom: 7px;
+}
+.process-card p { color: var(--muted); font-size: 13px; }
+
+/* CONTACT */
+.contact { background: #09141b; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 35px;
+}
+.contact-details p { color: var(--muted); margin: 14px 0; }
+.contact-details a { color: var(--gold-light); }
+.contact-form {
+  padding: 25px;
+  border: 1px solid #a47b3188;
+  border-radius: 14px;
+  background: #0d1a21;
+}
+.contact-form h3 { color: var(--gold-light); margin-bottom: 15px; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 13px;
+  background: #071016;
+  border: 1px solid #40505a;
+  color: white;
+  border-radius: 7px;
+  font: inherit;
+}
+.contact-form textarea { min-height: 115px; resize: vertical; }
+.contact-form button { width: 100%; cursor: pointer; }
+
+/* FOOTER */
+footer {
+  padding: 25px 0;
+  border-top: 1px solid #a47b3155;
+  background: #03070a;
+  color: var(--muted);
+  font-size: 13px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+footer a { color: var(--gold-light); }
+
+/* MOBILE */
+@media(max-width:950px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    background: #050b10;
+    padding: 22px;
+    flex-direction: column;
+    border-bottom: 1px solid var(--gold);
+  }
+  .nav-links.open { display: flex; }
+  .menu-btn { display: block; }
+  .nav-cta { display: none; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-art { min-height: 360px; }
+  .service-strip-grid { grid-template-columns: repeat(5,1fr); row-gap: 18px; }
+  .service-grid { grid-template-columns: repeat(3,1fr); }
+  .video-grid { grid-template-columns: repeat(2,1fr); }
+  .process-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:600px) {
+  .brand img { width: 175px; }
+  .hero-inner { padding: 42px 0; }
+  .hero h1 { font-size: 43px; }
+  .eyebrow { font-size: 20px; }
+  .hero-art { min-height: 300px; }
+  .feather-fan { transform: scale(.78); }
+  .service-strip-grid { grid-template-columns: repeat(2,1fr); }
+  .strip-item { border-right: none; }
+  .service-grid { grid-template-columns: repeat(2,1fr); }
+  .video-grid { grid-template-columns: 1fr; }
+  .about-grid,.contact-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  section { padding: 48px 0; }
 }
 </style>
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
-<nav class="container">
-<a class="brand" href="#home">
-<img src="logo.jpeg" alt="Prasanna AI Creations Logo">
-<div>PRASANNA <span>AI CREATIONS</span></div>
-</a>
-<div class="links">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#contact">Contact</a>
-</div>
-<a class="btn" href="#contact">Let's Talk</a>
-</nav>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <img src="Logo.jpeg" alt="Prasanna AI Creations original logo">
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#process">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="https://wa.me/918074808009" target="_blank" rel="noopener">
+      ☎ Order Now
+    </a>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  </div>
 </header>
 
-<main id="home">
-<section class="hero">
-<div class="container hero-content">
-<div class="eyebrow">Where Creativity Meets AI</div>
-<h1>Ideas Made <span>Imaginative.</span><br>Solutions Made Smart.</h1>
-<p>Creative digital experiences and practical technology solutions — from personalized AI videos and songs to websites, Android apps, chatbots and voice agents.</p>
-<div class="actions">
-<a class="btn" href="#portfolio">Explore My Work</a>
-<a class="btn outline" href="https://wa.me/918074808009">Discuss Your Idea</a>
-</div>
-</div>
+<main>
+
+<!-- PEACOCK FEATHER HERO BANNER -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+
+    <div>
+      <p class="eyebrow">Your Vision... Our Creativity...</p>
+      <h1>AI Powered<br>Creations</h1>
+      <p class="hero-sub">
+        Stunning Videos &nbsp; | &nbsp; Beautiful Images &nbsp; | &nbsp; Memorable Songs
+        <br>Smart Designs &nbsp; | &nbsp; Innovative Digital Solutions
+      </p>
+      <p class="hero-copy">
+        From personalized videos and songs to websites, Android apps,
+        chatbots and AI automation — we create what you imagine.
+      </p>
+      <a class="btn" href="https://wa.me/918074808009" target="_blank" rel="noopener">
+        ☎ Chat on WhatsApp →
+      </a>
+    </div>
+
+    <div class="hero-art">
+      <div class="feather-fan">
+        <div class="feather f1"></div>
+        <div class="feather f2"></div>
+        <div class="feather f3"></div>
+        <div class="feather f4"></div>
+        <div class="feather f5"></div>
+        <div class="feather f6"></div>
+        <div class="feather f7"></div>
+
+        <!-- YOUR ORIGINAL LOGO: no generated logo -->
+        <div class="logo-medallion">
+          <img src="Logo.jpeg" alt="Prasanna AI Creations">
+        </div>
+
+        <div class="feather-label label-one">AI Videos<br>& Reels</div>
+        <div class="feather-label label-two">AI Images<br>& Posters</div>
+        <div class="feather-label label-three">Websites</div>
+        <div class="feather-label label-four">Songs</div>
+        <div class="feather-label label-five">Android<br>Apps</div>
+        <div class="feather-label label-six">Invitations</div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section id="about">
-<div class="container about-grid">
-<div class="about">
-<div class="eyebrow">About the Brand</div>
-<h2>Creativity with a touch of technology.</h2>
-<p><b>Prasanna AI Creations</b> brings ideas to life through AI-powered content, thoughtful design and digital development.</p>
-<p>From personalized songs and celebration videos to business creatives, websites, Android applications and AI-powered assistants, the focus is on creating meaningful digital experiences for people and businesses.</p>
+<!-- SERVICE ICON STRIP -->
+<div class="service-strip">
+  <div class="container service-strip-grid">
+    <div class="strip-item"><div class="strip-icon">▧</div><p>AI Images<br>& Posters</p></div>
+    <div class="strip-item"><div class="strip-icon">▶</div><p>AI Videos<br>& Reels</p></div>
+    <div class="strip-item"><div class="strip-icon">♫</div><p>Personalized<br>Songs</p></div>
+    <div class="strip-item"><div class="strip-icon">🎁</div><p>Birthdays &<br>Anniversaries</p></div>
+    <div class="strip-item"><div class="strip-icon">💍</div><p>Wedding<br>Invitations</p></div>
+    <div class="strip-item"><div class="strip-icon">◎</div><p>Websites &<br>Landing Pages</p></div>
+    <div class="strip-item"><div class="strip-icon">▣</div><p>Android Apps<br>& Bug Fixing</p></div>
+    <div class="strip-item"><div class="strip-icon">🤖</div><p>AI Chatbots &<br>Voice Agents</p></div>
+    <div class="strip-item"><div class="strip-icon">🎨</div><p>Designs &<br>UI/UX</p></div>
+    <div class="strip-item"><div class="strip-icon">⚙</div><p>Automation &<br>Social Media</p></div>
+  </div>
 </div>
-<div class="about-card">
-<h3>Imagine. Create. Automate.</h3>
-<p>Every idea has a story. Let's shape yours into a creative video, a memorable gift, a beautiful design or a useful digital solution.</p>
-</div>
-</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <p class="section-kicker">What We Create</p>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-intro">
+      Creative content and smart technology solutions for personal moments,
+      businesses and digital growth.
+    </p>
+
+    <div class="service-grid">
+      <article class="service-card"><div class="service-icon">▧</div><h3>AI Images & Posters</h3><p>Creative visuals, logos and social media designs</p></article>
+      <article class="service-card"><div class="service-icon">▶</div><h3>AI Videos & Reels</h3><p>Personal, business and promotional videos</p></article>
+      <article class="service-card"><div class="service-icon">♫</div><h3>Personalized Songs</h3><p>Birthday, anniversary and special songs</p></article>
+      <article class="service-card"><div class="service-icon">🎁</div><h3>Birthday & Anniversary Videos</h3><p>Personalized celebration videos</p></article>
+      <article class="service-card"><div class="service-icon">💍</div><h3>Wedding Invitations</h3><p>Beautiful digital invitation videos</p></article>
+      <article class="service-card"><div class="service-icon">🌐</div><h3>Websites & Landing Pages</h3><p>Business websites and portfolios</p></article>
+      <article class="service-card"><div class="service-icon">📱</div><h3>Android Apps</h3><p>Java Android development and bug fixing</p></article>
+      <article class="service-card"><div class="service-icon">🤖</div><h3>AI Chatbots & Voice Agents</h3><p>Smart customer support assistants</p></article>
+      <article class="service-card"><div class="service-icon">🎨</div><h3>Designs & UI/UX</h3><p>Creative digital experiences</p></article>
+      <article class="service-card"><div class="service-icon">⚙</div><h3>Automation</h3><p>Workflow and social media automation</p></article>
+      <article class="service-card"><div class="service-icon">🎬</div><h3>Business Advertisements</h3><p>Promotional videos and product ads</p></article>
+      <article class="service-card"><div class="service-icon">🕯</div><h3>Memorial Videos</h3><p>Thoughtful tribute creations</p></article>
+      <article class="service-card"><div class="service-icon">📚</div><h3>Illustrations & Activity Books</h3><p>Creative learning materials</p></article>
+      <article class="service-card"><div class="service-icon">📊</div><h3>Presentations</h3><p>Professional visual presentations</p></article>
+      <article class="service-card"><div class="service-icon">💻</div><h3>Digital Solutions</h3><p>Custom technology support</p></article>
+    </div>
+  </div>
 </section>
 
-<section class="dark" id="services">
-<div class="container">
-<div class="heading">
-<div class="eyebrow">What I Can Create For You</div>
-<h2>Services & Expertise</h2>
-<p>Creative, design and technology services for individuals and businesses.</p>
-</div>
+<!-- PORTFOLIO: ALL 11 LINKS -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <p class="section-kicker">Featured Creations</p>
+    <h2 class="section-title">Our Latest Work</h2>
+    <p class="section-intro">
+      A selection of creations from our Instagram and YouTube.
+      Explore our work and get inspired for your next project.
+    </p>
 
-<div class="service-group">
-<h3>01 / AI Creative Services</h3>
-<div class="services">
-<article class="service"><small>01</small><h4>AI Image Creation</h4><p>Custom AI visuals, portraits and creative image generation.</p></article>
-<article class="service"><small>02</small><h4>AI Video Creation</h4><p>Cinematic, promotional, storytelling videos and reels.</p></article>
-<article class="service"><small>03</small><h4>AI Logo & Brand Creatives</h4><p>Logo concepts, brand visuals and creative identity assets.</p></article>
-<article class="service"><small>04</small><h4>Personalized Songs</h4><p>Birthday, name-based, emotional and occasion-based songs.</p></article>
-<article class="service"><small>05</small><h4>Birthday & Surprise Videos</h4><p>Personalized birthday songs and videos.</p></article>
-<article class="service"><small>06</small><h4>Anniversary Videos</h4><p>Marriage-date videos, anniversary songs and love stories.</p></article>
-<article class="service"><small>07</small><h4>Wedding Invitations</h4><p>Wedding, engagement and event invitation videos.</p></article>
-<article class="service"><small>08</small><h4>Posters & Social Media Designs</h4><p>Promotional posters, festival creatives and social posts.</p></article>
-<article class="service"><small>09</small><h4>Memorial & Tribute Videos</h4><p>Thoughtful remembrance and tribute video creations.</p></article>
-<article class="service"><small>10</small><h4>Reels, Shorts & Ad Creatives</h4><p>Social content, product promotions and brand advertisements.</p></article>
-<article class="service"><small>11</small><h4>Presentations & Digital Content</h4><p>AI-assisted presentations and educational content.</p></article>
-<article class="service"><small>12</small><h4>Illustrations & Activity Books</h4><p>Creative illustrations and printable materials.</p></article>
-</div>
-</div>
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterVideos('all',this)">All</button>
+      <button class="filter-btn" onclick="filterVideos('instagram',this)">Instagram Reels</button>
+      <button class="filter-btn" onclick="filterVideos('youtube',this)">YouTube</button>
+    </div>
 
-<div class="service-group">
-<h3>02 / AI Assistants & Automation</h3>
-<div class="services">
-<article class="service"><small>13</small><h4>AI Chatbots</h4><p>Website and business chatbots for FAQs and enquiries.</p></article>
-<article class="service"><small>14</small><h4>AI Voice Agents</h4><p>Voice assistants for customer conversations and enquiries.</p></article>
-<article class="service"><small>15</small><h4>AI Agents</h4><p>Task-oriented AI assistants using connected tools and workflows.</p></article>
-<article class="service"><small>16</small><h4>Workflow Automation</h4><p>Connected workflows to reduce repetitive business tasks.</p></article>
-<article class="service"><small>17</small><h4>Social Media Automation</h4><p>Automation for social media enquiries and content workflows.</p></article>
-</div>
-</div>
+    <div class="video-grid">
 
-<div class="service-group">
-<h3>03 / Web, Apps & Digital Technology</h3>
-<div class="services">
-<article class="service"><small>18</small><h4>Website Development</h4><p>Responsive portfolio and business websites.</p></article>
-<article class="service"><small>19</small><h4>Android App Development</h4><p>Native Android development using Java.</p></article>
-<article class="service"><small>20</small><h4>UI/UX Design</h4><p>User-friendly app and website interface design.</p></article>
-<article class="service"><small>21</small><h4>Android Bug Fixing</h4><p>Debugging, testing support and app improvements.</p></article>
-</div>
-</div>
-</div>
+      <article class="video-card" data-platform="instagram">
+        <div class="video-frame">
+          <iframe src="https://www.instagram.com/reel/DdLqpEWzz7s/embed"
+            title="Instagram Reel 1" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Featured Instagram Creation 01</h3>
+          <p>Instagram Reel</p>
+          <a class="watch-link" href="https://www.instagram.com/reel/DdLqpEWzz7s/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+        </div>
+      </article>
+
+      <article class="video-card" data-platform="instagram">
+        <div class="video-frame">
+          <iframe src="https://www.instagram.com/reel/Dd3NUUFTJwb/embed"
+            title="Instagram Reel 2" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Featured Instagram Creation 02</h3>
+          <p>Instagram Reel</p>
+          <a class="watch-link" href="https://www.instagram.com/reel/Dd3NUUFTJwb/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+        </div>
+      </article>
+
+      <article class="video-card" data-platform="instagram">
+        <div class="video-frame">
+          <iframe src="https://www.instagram.com/reel/Db0im1nz98v/embed"
+            title="Instagram Reel 3" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Featured Instagram Creation 03</h3>
+          <p>Instagram Reel</p>
+          <a class="watch-link" href="https://www.instagram.com/reel/Db0im1nz98v/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+        </div>
+      </article>
+
+      <article class="video-card" data-platform="instagram">
+        <div class="video-frame">
+          <iframe src="https://www.instagram.com/reel/Db3vZlBzond/embed"
+            title="Instagram Reel 4" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Featured Instagram Creation 04</h3>
+          <p>Instagram Reel</p>
+          <a class="watch-link" href="https://www.instagram.com/reel/Db3vZlBzond/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+        </div>
+      </article>
+
+      <article class="video-card" data-platform="instagram">
+        <div class="video-frame">
+          <iframe src="https://www.instagram.com/reel/DddvsMhT0UO/embed"
+            title="Instagram Reel 5" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Featured Instagram Creation 05</h3>
+          <p>Instagram Reel</p>
+          <a class="watch-link" href="https://www.instagram.com/reel/DddvsMhT0UO/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+        </div>
+      </article>
+
+      <article class="video-card" data-platform="instagram">
+        <div class="video-frame">
+          <iframe src="https://www.instagram.com/reel/Dd6jKwozBE6/embed"
+            title="Instagram Reel 6" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Featured Instagram Creation 06</h3>
+          <p>Instagram Reel</p>
+          <a class="watch-link" href="https://www.instagram.com/reel/Dd6jKwozBE6/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+        </div>
+      </article>
+
+      <article class="video-card" data-platform="instagram">
+        <div class="video-frame">
+          <iframe src="https://www.instagram.com/reel/Dee94gITv1P/embed"
+            title="Instagram Reel 7" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Featured Instagram Creation 07</h3>
+          <p>Instagram Reel</p>
+          <a class="watch-link" href="https://www.instagram.com/reel/Dee94gITv1P/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+        </div>
+      </article>
+
+      <article class="video-card" data-platform="instagram">
+        <div class="video-frame">
+          <iframe src="https://www.instagram.com/reel/Dd1xBR8TWmV/embed"
+            title="Instagram Reel 8" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Featured Instagram Creation 08</h3>
+          <p>Instagram Reel</p>
+          <a class="watch-link" href="https://www.instagram.com/reel/Dd1xBR8TWmV/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+        </div>
+      </article>
+
+      <article class="video-card" data-platform="instagram">
+        <div class="video-frame">
+          <iframe src="https://www.instagram.com/reel/Dd1ygBJTu5M/embed"
+            title="Instagram Reel 9" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Featured Instagram Creation 09</h3>
+          <p>Instagram Reel</p>
+          <a class="watch-link" href="https://www.instagram.com/reel/Dd1ygBJTu5M/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+        </div>
+      </article>
+
+      <article class="video-card" data-platform="instagram">
+        <div class="video-frame">
+          <iframe src="https://www.instagram.com/reel/Dc9VphBzVDy/embed"
+            title="Instagram Reel 10" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Featured Instagram Creation 10</h3>
+          <p>Instagram Reel</p>
+          <a class="watch-link" href="https://www.instagram.com/reel/Dc9VphBzVDy/" target="_blank" rel="noopener">Watch on Instagram ↗</a>
+        </div>
+      </article>
+
+      <article class="video-card youtube-card" data-platform="youtube">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/ShvoWpXfN4I"
+            title="Prasanna AI Creations YouTube Video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>YouTube Featured Creation</h3>
+          <p>YouTube Video</p>
+          <a class="watch-link" href="https://youtu.be/ShvoWpXfN4I" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </section>
 
-<section id="portfolio">
-<div class="container">
-<div class="heading">
-<div class="eyebrow">Selected Creations</div>
-<h2>Portfolio & Project Showcase</h2>
-<p>Explore videos, images, songs, designs and digital projects.</p>
-</div>
-<div class="filters" id="filters"></div>
-<div class="portfolio" id="portfolioGrid"></div>
-</div>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div>
+      <p class="section-kicker">About Us</p>
+      <h2 class="section-title">Prasanna AI Creations</h2>
+      <p class="section-intro">
+        We are a creative digital brand offering AI-powered content,
+        designs and technology solutions. From personalized gifts and
+        celebration videos to websites, Android apps and automation,
+        we turn ideas into meaningful digital experiences.
+      </p>
+      <br>
+      <a class="btn" href="https://wa.me/918074808009" target="_blank" rel="noopener">Know More →</a>
+    </div>
+
+    <div class="about-panel">
+      <h3>Why Choose Us?</h3>
+      <ul class="benefits">
+        <li>Creative and unique concepts</li>
+        <li>Personalized solutions</li>
+        <li>Quality-focused output</li>
+        <li>Friendly communication</li>
+        <li>Creative and technology services together</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<section class="dark">
-<div class="container">
-<div class="heading">
-<div class="eyebrow">How It Works</div>
-<h2>Let's Bring Your Idea to Life.</h2>
-</div>
-<div class="steps">
-<div class="step"><b>01</b><h4>Understand</h4><p>Share your idea and requirements.</p></div>
-<div class="step"><b>02</b><h4>Plan</h4><p>Confirm the service and creative direction.</p></div>
-<div class="step"><b>03</b><h4>Create</h4><p>Develop the creative work or digital solution.</p></div>
-<div class="step"><b>04</b><h4>Deliver</h4><p>Review and receive your final project.</p></div>
-</div>
-</div>
+<!-- HOW IT WORKS -->
+<section class="process" id="process">
+  <div class="container">
+    <p class="section-kicker">Our Process</p>
+    <h2 class="section-title">Let's Create Something Amazing</h2>
+    <p class="section-intro">Turning your ideas into reality, step by step.</p>
+
+    <div class="process-grid">
+      <div class="process-card">
+        <strong>01 · Share Your Idea</strong>
+        <p>Tell us what you need and share your requirements.</p>
+      </div>
+      <div class="process-card">
+        <strong>02 · Plan & Discuss</strong>
+        <p>Choose the right service and creative direction.</p>
+      </div>
+      <div class="process-card">
+        <strong>03 · Create</strong>
+        <p>We bring your idea to life with AI and creativity.</p>
+      </div>
+      <div class="process-card">
+        <strong>04 · Deliver</strong>
+        <p>Review your creation and receive the final project.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="contact">
-<div class="container">
-<div class="heading">
-<div class="eyebrow">Get In Touch</div>
-<h2>Let's Talk About Your Idea.</h2>
-<p>For personalized creations, business enquiries or technology projects, contact me.</p>
-</div>
-<div class="contact-grid">
-<div class="contact-card">
-<h3>Contact Details</h3>
-<div class="contact-row"><span>WhatsApp</span><a href="https://wa.me/918074808009">+91 80748 08009</a></div>
-<div class="contact-row"><span>Email</span><a href="mailto:prasannaaicreations@gmail.com">prasannaaicreations@gmail.com</a></div>
-<div class="contact-row"><span>Instagram</span><a href="https://www.instagram.com/prasannaaicreations/">@prasannaaicreations</a></div>
-<div class="contact-row"><span>YouTube</span><a href="https://www.youtube.com/@PrasannaAICreations">Prasanna AI Creations</a></div>
-</div>
-<div class="contact-card">
-<h3>Project Enquiry</h3>
-<form id="enquiry">
-<input id="name" required placeholder="Your Name">
-<input id="email" type="email" required placeholder="Your Email">
-<input id="service" placeholder="Service Required">
-<textarea id="message" required placeholder="Tell me about your project"></textarea>
-<button class="btn" type="submit">Send Enquiry</button>
-</form>
-</div>
-</div>
-</div>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+
+    <div class="contact-details">
+      <p class="section-kicker">Get In Touch</p>
+      <h2 class="section-title">Let's Create Something Amazing</h2>
+      <p>Have a project in mind? Reach out to us!</p>
+
+      <p>☎ WhatsApp:
+        <a href="https://wa.me/918074808009" target="_blank" rel="noopener">+91 80748 08009</a>
+      </p>
+      <p>✉ Email:
+        <a href="mailto:prasannaaicreations@gmail.com">prasannaaicreations@gmail.com</a>
+      </p>
+      <p>◎ Instagram:
+        <a href="https://www.instagram.com/prasannaaicreations/" target="_blank" rel="noopener">@prasannaaicreations</a>
+      </p>
+      <p>▶ YouTube:
+        <a href="https://www.youtube.com/@PrasannaAICreations" target="_blank" rel="noopener">Prasanna AI Creations</a>
+      </p>
+      <br>
+      <a class="btn" href="https://wa.me/918074808009" target="_blank" rel="noopener">Order Now on WhatsApp →</a>
+    </div>
+
+    <form class="contact-form" onsubmit="sendEnquiry(event)">
+      <h3>Send Us a Message</h3>
+      <input id="customerName" type="text" placeholder="Your Name" required>
+      <input id="customerEmail" type="email" placeholder="Your Email" required>
+
+      <select id="serviceRequired" required>
+        <option value="">Select a Service</option>
+        <option>AI Images & Posters</option>
+        <option>AI Videos & Reels</option>
+        <option>Personalized Songs</option>
+        <option>Birthday & Anniversary Videos</option>
+        <option>Wedding Invitation Videos</option>
+        <option>Business Advertisements</option>
+        <option>Memorial Videos</option>
+        <option>Website Development</option>
+        <option>Android App Development</option>
+        <option>AI Chatbots & Voice Agents</option>
+        <option>Automation</option>
+        <option>Other Enquiry</option>
+      </select>
+
+      <textarea id="projectMessage" placeholder="Tell us about your project..." required></textarea>
+      <button class="btn" type="submit">Send Message →</button>
+    </form>
+
+  </div>
 </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer>
-© <span id="year"></span> Prasanna AI Creations. All Rights Reserved.
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Prasanna AI Creations. All Rights Reserved.</p>
+    <p>Your Ideas · Our Creativity · AI Powered</p>
+    <p>
+      <a href="#home">Home</a> &nbsp; | &nbsp;
+      <a href="#services">Services</a> &nbsp; | &nbsp;
+      <a href="#portfolio">Portfolio</a> &nbsp; | &nbsp;
+      <a href="#contact">Contact</a>
+    </p>
+  </div>
 </footer>
-<a class="whatsapp" href="https://wa.me/918074808009">WhatsApp ↗</a>
 
 <script>
-document.getElementById("year").textContent=new Date().getFullYear();
-
-/* ADD YOUR PROJECTS BELOW.
-   YouTube: type "youtube"
-   Instagram: type "instagram"
-   Image: type "image"
-   Video file: type "video"
-   Song/audio: type "audio"
-
-   Upload local files to GitHub, e.g. assets/poster.jpg
-   Then use that file path as the url.
-*/
-const portfolioItems = [
- // Example YouTube:
- // {title:"My AI Video",category:"AI Videos",type:"youtube",url:"https://www.youtube.com/watch?v=VIDEO_ID",description:"AI promotional video."},
-
- // Example Instagram:
- // {title:"My Instagram Reel",category:"AI Videos",type:"instagram",url:"https://www.instagram.com/reel/POST_ID/",description:"Creative AI reel."},
-
- // Example Image:
- // {title:"Poster Design",category:"Posters",type:"image",url:"assets/poster.jpg",description:"Festival poster."},
-
- // Example Video:
- // {title:"Wedding Invitation",category:"Invitation Videos",type:"video",url:"assets/invitation.mp4",description:"Digital wedding invitation."},
-
- // Example Song:
- // {title:"Personalized Song",category:"Songs",type:"audio",url:"assets/song.mp3",description:"Custom birthday song."}
-];
-
-const grid=document.getElementById("portfolioGrid");
-const filters=document.getElementById("filters");
-let active="All Work";
-
-function youtubeId(url){
- try{
-  const u=new URL(url);
-  if(u.hostname.includes("youtu.be"))return u.pathname.slice(1);
-  if(u.searchParams.get("v"))return u.searchParams.get("v");
-  const m=u.pathname.match(/\/(?:embed|shorts)\/([^/?]+)/);
-  return m?m[1]:"";
- }catch{return ""}
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("open");
 }
 
-function media(item){
- if(item.type==="youtube"){
-  const id=youtubeId(item.url);
-  return `<iframe src="https://www.youtube-nocookie.com/embed/${id}" title="${item.title}" loading="lazy" allowfullscreen></iframe>`;
- }
- if(item.type==="instagram"){
-  return `<iframe src="${item.url.replace(/\/$/,"")}/embed" loading="lazy" allowfullscreen></iframe>`;
- }
- if(item.type==="image")return `<img src="${item.url}" alt="${item.title}" loading="lazy">`;
- if(item.type==="video")return `<video src="${item.url}" controls preload="metadata"></video>`;
- if(item.type==="audio")return `<audio src="${item.url}" controls></audio>`;
- return "";
-}
-
-function render(){
- const cats=["All Work",...new Set(portfolioItems.map(x=>x.category))];
- filters.innerHTML="";
- cats.forEach(cat=>{
-  const b=document.createElement("button");
-  b.className="filter"+(active===cat?" active":"");
-  b.textContent=cat;
-  b.onclick=()=>{active=cat;render()};
-  filters.appendChild(b);
- });
- const items=portfolioItems.filter(x=>active==="All Work"||x.category===active);
- grid.innerHTML="";
- if(!items.length){
-  grid.innerHTML=`<div class="work" style="grid-column:1/-1;padding:35px;text-align:center;color:#d8ad55">
-  <h3>Your creations will appear here.</h3>
-  <p>Add your Instagram, YouTube, images, videos and songs in the portfolioItems list in this HTML file.</p>
-  </div>`;
-  return;
- }
- items.forEach(item=>{
-  const card=document.createElement("article");
-  card.className="work";
-  const box=document.createElement("div");
-  box.className="media";
-  box.innerHTML=media(item);
-  const info=document.createElement("div");
-  info.className="work-info";
-  info.innerHTML=`<small>${item.category}</small><h4>${item.title}</h4><p>${item.description||""}</p><a href="${item.url}" target="_blank" rel="noopener">Open Project ↗</a>`;
-  card.append(box,info);
-  grid.appendChild(card);
- });
-}
-render();
-
-document.getElementById("enquiry").addEventListener("submit",function(e){
- e.preventDefault();
- const subject=encodeURIComponent("Project Enquiry - Prasanna AI Creations");
- const body=encodeURIComponent(
- `Name: ${document.getElementById("name").value}
-Email: ${document.getElementById("email").value}
-Service: ${document.getElementById("service").value}
-
-Project Details:
-${document.getElementById("message").value}`
- );
- location.href=`mailto:prasannaaicreations@gmail.com?subject=${subject}&body=${body}`;
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navLinks").classList.remove("open");
+  });
 });
+
+function filterVideos(platform, button) {
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.classList.remove("active");
+  });
+  button.classList.add("active");
+
+  document.querySelectorAll(".video-card").forEach(card => {
+    const shouldShow =
+      platform === "all" || card.dataset.platform === platform;
+    card.style.display = shouldShow ? "" : "none";
+  });
+}
+
+function sendEnquiry(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("customerName").value.trim();
+  const email = document.getElementById("customerEmail").value.trim();
+  const service = document.getElementById("serviceRequired").value;
+  const message = document.getElementById("projectMessage").value.trim();
+
+  const subject = encodeURIComponent("Website Enquiry - " + service);
+  const body = encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Service: " + service + "\n\n" +
+    "Project Details:\n" + message
+  );
+
+  window.location.href =
+    "mailto:prasannaaicreations@gmail.com?subject=" +
+    subject + "&body=" + body;
+}
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
+
 </body>
 </html>
-
